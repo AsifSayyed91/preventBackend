@@ -5,7 +5,8 @@ const stateRoutes = require('./routes/stateRoutes');
 const districtRoutes = require('./routes/districtRoutes');
 const userRoutes = require('./routes/userRoutes');
 const locationRoutes = require('./routes/locationRoutes');
-const patientRoutes = require('./routes/patientRoutes')
+const patientRoutes = require('./routes/patientRoutes');
+const healthReportRoutes = require("./routes/healthReportRoutes");
 
 
 const app = express();
@@ -18,6 +19,7 @@ app.use('/api/districts', districtRoutes);
 app.use('/api/users', userRoutes);
 app.use('/location', locationRoutes);
 app.use('/patient', patientRoutes);
+app.use("/api/reports", healthReportRoutes);
 
 
 const PORT = process.env.PORT;
